@@ -1,0 +1,62 @@
+/* component/EarnestMoneyComponent/EarnestMoney.wxss */
+/* 诚意金 */
+.container-yue-ta-bonafide-money{
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 12px;
+  color: #999999;
+  padding: 16rpx 28rpx;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.container-yue-ta-bonafide-money-descript {
+  width: 100%;
+}
+
+.container-yue-ta-bonafide-money-progress{
+  margin: 16rpx 0 8rpx;
+  position: relative;
+}
+
+.container-yue-ta-bonafide-money-progress >image{
+  width: 28rpx;
+  height: 28rpx;
+  position: absolute;
+  top: -10rpx;
+  left: 0%;
+}
+
+.container-yue-ta-bonafide-money-list{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 104%;
+  flex-wrap: wrap;
+}
+
+.container-yue-ta-bonafide-money-list text{
+  width: 29.33333%;
+  background-color: #f9f9f9;
+  border-radius: 40rpx;
+  text-align: center;
+  padding: 8rpx 24rpx;
+  margin: 16rpx 4% 0 0;
+  box-sizing: border-box;
+}
+
+.container-yue-ta-bonafide-money-normal{
+  background-color: #f9f9f9;
+  color: #999999;
+}
+
+.container-yue-ta-bonafide-money .container-yue-ta-bonafide-money-select{
+  background-color: #5caf3a;
+  color: white;
+}
+
+.container-yue-ta-bonafide-money-top{
+  margin-top: 28rpx;
+}

@@ -1,0 +1,17 @@
+<!--component/EarnestMoneyComponent/EarnestMoney.wxml-->
+<view class='container-yue-ta-bonafide-money'>
+  <view class='container-yue-ta-bonafide-money-descript'>
+    <view><text>应邀率达:</text><text>{{percent}}%</text></view>
+    <text>越高的诚意金约会的成功率越高</text>
+    <view class='container-yue-ta-bonafide-money-progress'>
+      <progress percent='{{percent}}' stroke-width='10' stroke-width='3' activeColor='#ffc117' backgroundColor='#fff7ec'></progress>
+      <image style='left:{{percent+"%"}}' src='../../img/ic_has_like_icon.png'></image>
+    </view>
+  </view>
+  
+  <view class='container-yue-ta-bonafide-money-list'>
+    <text class="{{item.checked?'container-yue-ta-bonafide-money-select':'container-yue-ta-bonafide-money-normal'}}" wx:for="{{earnestMoneyList}}" bindtap='onEarnestMoneyItemClick' data-EarnestMoneyItem='{{item}}' data-index='{{index}}'>{{item.title.text}}</text>
+  </view>
+
+  <text class='container-yue-ta-bonafide-money-top'>诚意金可用于订单服务费用支付;订单完成或超时，诚意金将退回你的觅订账户</text>
+</view>

@@ -1,0 +1,72 @@
+<!--pages/user/user-info-center/user-info-center.wxml-->
+<view class='user-info-center-header'>
+  <view class='user-info-center-header-sub-header'><text class='iconfont icon-back' bindtap='onBack'></text>
+  <text class='iconfont {{isCollect?"icon-collect-gold":"icon-collect-white"}}' bindtap='onCollect' data-isCollect='{{isCollect}}'></text>
+  <text class='iconfont icon-more' bindtap='onMore'></text>
+  </view>
+  <view class='user-info-center-header-avatar'><image></image><text>VIP</text></view>
+  <view class='user-info-center-header-textview'>
+    <view>
+    <text class='user-info-center-header-nickname'>葡萄</text>
+    </view>
+    <text class='user-info-center-header-location'>广州市越秀区</text>
+  </view>
+</view>
+<view class='user-info-center-body'>
+  <view class='user-info-item'>
+    <text>个人相册</text>
+    <view class='user-photoalbum-list'><image></image><image></image><image></image></view>
+    <text class='user-photoalbum-more iconfont icon-arrow-right'>更多</text>
+  </view>
+
+  <view class='user-info-item'>
+    <text>个人认证</text>
+    <view class='user-auth-list'><image class='iconfont icon-weixin'></image><image class='iconfont icon-zhifubao'></image><image class='iconfont icon-weibo'></image></view>
+  </view>
+
+    <view class='user-info-item'>
+    <text>访客</text>
+    <view class='user-visitor-list'><image></image><image></image><image></image></view>
+    <text class='user-visitor-list-num'>9156人</text>
+  </view>
+
+  <view class='user-info-skill-info'>
+    <text class='user-info-skill-info-title'>Ta的技能</text>
+
+    <view class='user-info-skill-info-item'>
+      <view class='user-info-skill-info-item-info'>
+        <view class='user-info-skill-info-item-info-avarar'><image></image><text>vip</text></view>
+        <view class='user-info-skill-info-item-info-target'><text style='color: #1e1c1c;'>看电影</text><text>应邀120次</text></view>
+        <text style='font-size:12px;color:#999999'>线下：<text style='font-size:16px;color:red'>180元/小时</text></text>
+      </view>
+      <view class='user-info-skill-info-item-description'>
+        <text class='text-hidden-overflow'>超级喜欢看电影，最爱看电影，孤单一个人看电影记得约我一起哟...</text>
+        <image></image>
+      </view>
+    </view>
+    <view class='user-info-skill-info-item'>
+      <view class='user-info-skill-info-item-info'>
+        <view class='user-info-skill-info-item-info-avarar'><image></image><text>vip</text></view>
+        <view class='user-info-skill-info-item-info-target'><text style='color: #1e1c1c;'>看电影</text><text>应邀120次</text></view>
+        <text style='font-size:12px;color:#999999'>线下：<text style='font-size:16px;color:red'>180元/小时</text></text>
+      </view>
+      <view class='user-info-skill-info-item-description'>
+        <text class='text-hidden-overflow'>超级喜欢看电影，最爱看电影，孤单一个人看电影记得约我一起哟...</text>
+        <image></image>
+      </view>
+    </view>
+    <view class='user-info-skill-info-item'>
+      <view class='user-info-skill-info-item-info'>
+        <view class='user-info-skill-info-item-info-avarar'><image></image><text>vip</text></view>
+        <view class='user-info-skill-info-item-info-target'><text style='color: #1e1c1c;'>看电影</text><text>应邀120次</text></view>
+        <text style='font-size:12px;color:#999999'>线下：<text style='font-size:16px;color:red'>180元/小时</text></text>
+      </view>
+      <view class='user-info-skill-info-item-description'>
+        <text class='text-hidden-overflow'>超级喜欢看电影，最爱看电影，孤单一个人看电影记得约我一起哟...</text>
+        <image></image>
+      </view>
+    </view>
+  </view>
+
+</view>
+<button class='user-info-yue-ta' bindtap='onYueTa' data-userid='123456'>约Ta</button>

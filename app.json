@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/user/user-info-center/user-info-center",
+    "pages/index/index",
+    "pages/yueta/yueta",
+    "pages/logs/logs",
+    "pages/tab/near/near",
+    "pages/tab/msg/msg",
+    "pages/tab/me/me"
+  ],
+  "window": {
+    "backgroundTextStyle": "white",
+    "navigationBarBackgroundColor": "#f0f0f0",
+    "navigationBarTitleText": "Hello World",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/user/user-info-center/user-info-center",
+        "text": "首页",
+        "iconPath": "/img/ic_index_off.png",
+        "selectedIconPath": "/img/ic_index_on.png"
+      },
+      {
+        "pagePath": "pages/tab/near/near",
+        "text": "附近",
+        "iconPath": "/img/ic_near_off.png",
+        "selectedIconPath": "/img/ic_near_on.png"
+      },
+      {
+        "pagePath": "pages/tab/msg/msg",
+        "text": "消息",
+        "iconPath": "img/ic_msg_off.png",
+        "selectedIconPath": "img/ic_msg_on.png"
+      },
+      {
+        "pagePath": "pages/tab/me/me",
+        "text": "我的",
+        "iconPath": "img/ic_me_off.png",
+        "selectedIconPath": "img/ic_me_on.png"
+      }
+    ],
+    "color": "#999999"
+  }
+}

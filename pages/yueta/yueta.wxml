@@ -1,0 +1,82 @@
+<!--pages/yueta.wxml-->
+<view class='container-yue-ta'>
+  <view class='container-yue-ta-header'>
+    <view class='container-yue-ta-header-back'>
+      <text bindtap='onSelectSkill'>约Ta</text>
+      <image bindtap='onBack' src='../../img/ic_arr_left_back.png'></image>
+    </view>
+    <view class='container-yue-ta-user-info'>
+      <view class='container-yue-ta-user-info-avatar'>
+          <image bindtap='onBack' src='{{yueTaData.userlist[0].avatar}}'></image>
+          <text hidden='{{yueTaData.userlist[0].vip == 0}}'>VIP</text>
+      </view>
+      <view class='container-yue-ta-user-info-details'>
+        <text class='container-yue-ta-user-info-nickname'>{{yueTaData.userlist[0].nickname}}</text>
+        <text class='user-info-details-age iconfont icon-sexw'>{{yueTaData.userlist[0].age}}</text>
+        <text class='container-yue-ta-user-info-address'>{{yueTaData.userlist[0].distance}}</text>
+      </view>
+      <block wx:for="{{yueTaData.userlist[0].fwfs}}" wx:for-item="fwfsItem">
+      <text class='container-yue-ta-user-info-price-service' hidden="{{fwfsItem.name !== 'xxfw_jq'}}">{{fwfsItem.text}}</text>
+      </block>
+    </view>
+    <view class='container-yue-ta-refer-type'>
+      <text wx:for="{{yueTaData.userlist[0].fwfs}}" wx:for-item="fwfsItem" wx:if="{{fwfsItem.name !== 'xxfw_jq'}}">{{fwfsItem.text}}</text>
+    </view>
+  </view>
+
+  <view class='container-yue-ta-sub-title'>
+    <text>预约内容</text>
+  </view>
+  
+  <view class='content-subscribe-view divider'>
+    <text class='content-subscribe-view-title'>服务内容</text>
+    <text class='content-subscribe-view-target' bindtap='onSelectSkill'>{{yueTaData.title}}</text>
+    <image src='../../img/ic_arr_right_gray.png'></image>
+  </view>
+  <view class='content-subscribe-view'>
+    <text class='content-subscribe-view-title'>预约时间</text>
+    <text class='content-subscribe-view-target' bindtap='onSelectTime'>商议</text>
+    <image src='../../img/ic_arr_right_gray.png'></image>
+  </view>
+
+  <view class='container-yue-ta-sub-title'>
+    <text>诚意金</text>
+  </view>
+
+  <block wx:for="{{yueTaData.needattr}}" wx:for-item="needAttrItem">
+      <earnest-money wx:if="{{needAttrItem.name === 'cyj'}}" earnestMoneyList="{{needAttrItem.values}}" bindcyjSelectTap="cyjSelectTap">{{needAttrItem}}</earnest-money> 
+  </block>
+  <view class='container-yue-ta-publish'>
+    <text class='container-yue-ta-publish-need' bindtap='onPublish'>确认</text>
+    <view>
+      <text>发布需求成功即同意</text>
+      <text class='container-yue-ta-publish-protocol'>《觅订使用协议》</text>
+    </view>
+  </view>
+</view>
+<view class='dialog-select-time'>
+  <view class='dialog-select-time-b'>
+
+    <scroll-view scroll-y>
+      <view>123</view>
+      <view class='divider-line'></view>
+      <view>123</view>
+      <view class='divider-line'></view>
+      <view>123</view>
+      <view class='divider-line'></view>
+      <view>123</view>
+      <view class='divider-line'></view>
+      <view>123</view>
+      <view class='divider-line'></view>
+      <view>123</view>
+      <view class='divider-line'></view>
+      <view>123</view>
+      <view class='divider-line'></view>
+      <view>123</view>
+      <view class='divider-line'></view>
+      <view>123</view>
+      <view class='divider-line'></view>
+    </scroll-view>
+  </view>
+</view>
+

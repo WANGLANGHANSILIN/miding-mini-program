@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "约Ta",
+  "navigationBarTextStyle": "black",
+  "enablePullDownRefresh": true,
+  "navigationBarBackgroundColor": "white",
+  "usingComponents": {
+    "earnest-money":"../../component/EarnestMoneyComponent/EarnestMoney"
+  }
+}

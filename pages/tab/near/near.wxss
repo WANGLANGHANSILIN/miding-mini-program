@@ -1,0 +1,146 @@
+/* pages/table/tab1/tab1.wxss */
+.near-pages-container {
+  background: #f7f7f7;
+}
+
+.near-list-item {
+  padding: 14rpx;
+  background: white;
+  margin: 10rpx 0;
+}
+
+.near-list-item-user-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 14rpx;
+}
+.user-info-avatar-image {
+  border-radius:50%;
+  width: 100rpx;
+  height: 100rpx; 
+}
+.near-list-item-user-info-details{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  font-size: 14px;
+  padding-left: 14rpx;
+}
+
+.iconfont{
+  font-size: 12px;
+}
+
+.user-info-details-age{
+  border-radius: 18rpx;
+  background: pink;
+  color: white;
+  padding: 7rpx 21rpx;
+  margin-left: 14rpx;
+  text-align: center;
+}
+
+.icon-sexm{
+  background: blue;
+}
+
+/* .user-info-details-age::before{
+  content: '-';
+  background-image:url('../../../img/ic_icon_girl.png');
+  background-repeat:no-repeat;
+  background-position:left;
+  background-origin:border-box;
+} */
+.user-auth-pic{
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 10rpx;
+}
+.user-info-details-sendtime{
+  padding: 1rpx 18rpx;
+}
+.user-info-details-sendtime::before{
+  content: '·';
+  margin: 0 10rpx;
+}
+
+.near-list-item-yue-ta{
+  border-radius: 28rpx;
+  background-color: #5caf3a;
+  color: white;
+  font-size: 14px;
+  padding: 7rpx 21rpx;
+  margin: 28rpx;
+}
+
+.near-list-item-text-descript {
+  font-size: 14px;
+  margin-top: 7rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.near-list-item-text-descript::after{
+  content: '全文',
+}
+
+.near-list-item-text-title{
+  font-size: 18px;
+  color: #5caf3a;
+  margin-top: 14rpx;
+}
+
+.near-list-item-zan-favorite{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.near-list-item-zan-favorite image {
+  width: 30rpx;
+  height: 30rpx;
+}
+.near-list-item-zan-favorite text{
+  color: gray;
+  font-size: 14px;
+  margin-left: 7rpx;
+}
+.near-list-item-zan-favorite text:nth-child(2){
+  margin: 10rpx 40rpx 10rpx 7rpx;
+}
+
+.near-list-item-meadia {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.near-list-item-meadia-image-single {
+  width: 300rpx;
+  height: 300rpx;
+  margin-right: 7rpx;
+}
+
+.near-list-item-meadia-image-three {
+  width: 33.3%;
+  height: 220rpx;
+  margin-right: 7rpx; 
+}
+
+.near-list-item-meadia-image-three image:last-child{
+  border: 2px yellow solid;
+  margin-right: none;
+  background: red;
+}
+
+.near-pages-bottom {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 14rpx;
+}

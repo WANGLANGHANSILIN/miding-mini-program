@@ -1,0 +1,52 @@
+<!--pages/table/tab3/tab3.wxml-->
+
+<view class='me-container'>
+
+  <view class='me-container-header'>
+    <view class='me-container-header-top'>
+        <view class='me-top-child'>
+          <view>
+            <text class='me-nickname'>{{userInfo.nickName}}</text>
+
+            <text class='me-descript'>{{userInfo.descript}}</text>
+          </view>
+          <image src='{{userInfo.add}}' class='me-add'></image>
+        </view>
+    </view>
+
+    <view class='me-container-header-info'>
+      <view class='info-item'wx:for="{{headerDataList}}" wx:key="key" bindtap='onHeaderDataListOnclick' data-item='{{item}}'>
+        <text class='info-item-title'>{{item.num}}</text>
+        <text class='info-item-descript'>{{item.descript}}</text>
+      </view>
+
+      <view class='info-item-vip'>
+        <text class='info-item-vip-text' bindtap='onVipOnClick' data-text='升级VIP'>升级VIP</text>
+      </view>
+    </view>
+
+    <image class='me-header-img' src='{{userInfo.userImg}}' bindtap='onUserHeaderOnClick' data-info='{{userInfo}}'></image>
+
+  </view>
+
+  <view class='me-container-body'>
+    <view class='me-all-order'>
+      <text>全部订单</text>
+      <image src='../../../img/ic_arr_right_green.png'></image>
+    </view>
+
+    <view class='me-manger-list'>
+      <view wx:for="{{mangerList}}" wx:key="key" class='me-manger-list-item' bindtap='onMangerListOnclick' data-item='{{item}}'>
+        <image src='{{item.icon}}'></image>
+        <text>{{item.title}}</text>
+      </view>
+    </view>
+
+    <view class='me-setting-list'>
+      <view class='me-setting-list-item' wx:for="{{settingList}}" wx:key="key" bindtap='onSettingListOnclick' data-item='{{item}}'>
+        <text>{{item.title}}</text>
+        <image src='{{item.icon}}'></image>
+      </view>
+    </view>
+  </view>
+</view>

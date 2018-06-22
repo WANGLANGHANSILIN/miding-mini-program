@@ -1,0 +1,50 @@
+<!--pages/table/tab1/tab1.wxml-->
+<view class='near-pages-container'>
+
+  <view class='near-list-item' wx:for="{{nearData}}" wx:key="near-key">
+    <!-- 头像、距离等 -->
+    <view class='near-list-item-user-info'>
+      <image class='user-info-avatar-image' src='{{item.avatar}}'></image>
+      <view class='near-list-item-user-info-details'>
+        <view class='user-info-details'>
+          <text>{{item.nickname}}</text>
+          <text wx:if="{{item.gender === 1}}" class='user-info-details-age iconfont icon-sexw'>{{item.age}}</text>
+          <text wx:else class='user-info-details-age iconfont icon-sexm'>{{item.age}}</text>
+        </view>
+        <view>
+          <image wx:for="{{item.userauthpic}}" wx:key="auth-pic-key" wx:for-item="pic" src='{{pic}}' class='user-auth-pic'></image>
+          <text>{{item.distance}}</text>
+          <text class='user-info-details-sendtime'>{{item.sendtimetag}}</text>
+        </view>
+      </view>
+      <text class='near-list-item-yue-ta' bindtap='onYueTa' data-item='{{item}}'>约 TA</text>
+    </view>
+    <!-- 照片、视频 -->
+    <view class='near-list-item-meadia'>
+      <block wx:for='{{item.objdata.picture}}' wx:for-item='dpic' wx:key="near-dpic-key" >
+        <block wx:if="{{item.objdata.picture.length >= 3}}">
+          <image src="{{dpic}}" class='near-list-item-meadia-image-three' bindtap='previewImage'
+           data-imgurls='{{item.objdata.picture}}' data-currentImgurl="{{dpic}}"></image>
+        </block> 
+        <image wx:else src="{{dpic}}" class='near-list-item-meadia-image-single' bindtap='previewImage'
+         data-imgurls='{{item.objdata.picture}}' data-currentImgurl="{{dpic}}"></image>
+      </block>
+    </view>
+    <!-- 文字描述 -->
+    <view class='near-list-item-text-descript'>{{item.objdata.description}}</view>
+
+    <text class='near-list-item-text-title'>{{item.skills.category.title}}</text>
+    <!-- 点赞、喜欢 -->
+    <view class='near-list-item-zan-favorite'>
+      <image src='{{item.has_dianzan?"../../../img/ic_has_like_icon.png":"../../../img/ic_like_icon.png"}}' bindtap='onDianZan' data-index='{{index}}'></image>
+      <text>{{item.dianzannum}}</text>
+      <image src='{{item.has_collect?"../../../img/ic_has_collection_icon.png":"../../../img/ic_collection_icon.png"}}' bindtap='onCollect' data-index='{{index}}'></image>
+      <text>{{item.fensinum}}</text>
+    </view>
+  </view>
+
+  <view class='near-pages-bottom' hidden='{{!isLoadMore}}'>
+    <text >正在加载第{{currentPage}}页...</text>
+  </view>
+
+</view>

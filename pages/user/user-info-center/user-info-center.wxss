@@ -1,0 +1,255 @@
+
+.icon-collect-gold:before { content: "\e64e"; }
+.icon-collect-gold {
+  color: gold;
+}
+.icon-collect-white:before { content: "\e64e"; }
+.icon-collect-white {
+  color: white;
+}
+/* pages/user/user-info-center/user-info-center.wxss */
+.user-info-center-header {
+  width: 100%;
+  height: 360rpx;
+  background-color: #7bbc26;
+  padding: 32rpx;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.user-info-center-header-sub-header {
+  position: absolute;
+  top: 32rpx;
+  width: 100%;
+  height: 48rpx;
+  line-height: 48rpx;
+}
+
+.user-info-center-header-sub-header text:nth-child(odd) {
+  color: white;
+}
+.user-info-center-header-sub-header text:last-child {
+  position: absolute;
+  right: 64rpx;
+}
+.user-info-center-header-sub-header text:nth-child(2) {
+  position: absolute;
+  right: 128rpx;
+}
+
+.user-info-center-header-avatar {
+  width: 144rpx;
+  height: 160rpx;
+  position: absolute;
+  top: 56rpx;
+  margin-left: 50%;
+  left: -72rpx;
+}
+
+.user-info-center-header-avatar>image{
+  border-radius: 50%;
+  border: 1rpx dashed white;
+  width: 144rpx;
+  height: 144rpx;
+}
+
+.user-info-center-header-avatar>text{
+  position: absolute;
+  width: 80rpx;
+  height: 32rpx;
+  line-height: 32rpx;
+  bottom: 0;
+  text-align: center;
+  color: white;
+  border-radius: 20rpx;
+  background: gold;
+  margin-left: 50%;
+  left: -40rpx;
+  font-size: 12px;
+}
+
+.user-info-center-header-textview {
+  position: absolute;
+  width: 100%;
+  margin: 196rpx auto;
+  left: 0;
+  top: 32rpx;
+  text-align: center;
+  color: white;
+}
+.user-info-center-header-nickname{
+  font-size: 16px;
+}
+.user-info-center-header-location{
+  font-size: 12px;
+}
+
+.user-info-center-body {
+  width: 100%;
+  padding: 32rpx;
+  box-sizing: border-box;
+}
+.user-info-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  font-size: 14px;
+  color: #1e1c1c;
+  padding: 16rpx 0;
+  border-bottom: 1rpx solid #d9d9d9;
+}
+
+.user-photoalbum-list{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex: 1;
+  width: 102%;
+  padding-left: 48rpx;
+}
+
+.user-photoalbum-list image{
+  width: 120rpx;
+  height: 120rpx;
+  margin-right: 16rpx;
+  background: yellow;
+}
+.user-photoalbum-more{
+  color: #999999;
+}
+
+.user-auth-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex: 1;
+  padding-left: 48rpx;
+}
+
+.user-auth-list image {
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 8rpx;
+  color: green;
+  font-size: 14px;
+}
+
+.user-visitor-list{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex: 1;
+  padding-left: 48rpx;
+}
+
+.user-visitor-list image {
+  width: 56rpx;
+  height: 56rpx;
+  margin-left: 16rpx;
+  background: rebeccapurple;
+  border-radius: 50%;
+}
+
+.user-visitor-list-num {
+  color: #999999;
+}
+.user-info-item>text{
+  width: 56px;
+  text-align: justify;
+}
+
+.user-info-skill-info {
+  padding: 24rpx 0rpx;
+}
+
+.user-info-skill-info-item {
+  padding: 16rpx 0;
+  border-bottom: 1rpx solid #d9d9d9;
+}
+
+.user-info-skill-info-item-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  font-size: 14px;
+}
+.user-info-skill-info-item-info-avarar{
+  position: relative;
+  width: 96rpx;
+  height: 112rpx;
+  left: 0;
+  top: 0;
+  margin-right: 32rpx;
+}
+.user-info-skill-info-item-info-avarar>image{
+  width: 96rpx;
+  height: 96rpx;
+  border-radius: 50%;
+  border: 1rpx dashed greenyellow;
+  position: absolute;
+  top: 0;
+}
+.user-info-skill-info-item-info-avarar>text{
+  position: absolute;
+  width: 64rpx;
+  text-align: center;
+  bottom: 0;
+  border-radius: 32rpx;
+  background: gold;
+  line-height: 32rpx;
+  font-size: 14px;
+  color: white;
+  margin-left: 50%;
+  left: -32rpx;
+}
+.user-info-skill-info-item-info-target{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #999999;
+}
+
+
+.user-info-skill-info-item-description {
+  padding: 12rpx 24rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 16rpx;
+  background: #f9f9f9;
+}
+
+.user-info-skill-info-item-description>text{
+  font-size: 12px;
+  color: #999999;
+  flex: 1;
+  padding-right: 80rpx;
+}
+
+.text-hidden-overflow {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.user-info-skill-info-item-description>image{
+  width: 144rpx;
+  height: 120rpx;
+  background: coral;
+}
+
+.user-info-yue-ta {
+  width: 90%;
+  background: #5caf3a;
+  border-radius: 16rpx;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  left: 5%;
+}
