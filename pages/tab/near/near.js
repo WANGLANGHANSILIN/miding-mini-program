@@ -203,6 +203,13 @@ Page({
 
     
   },
+  skipUserInfo: function (event){
+    var item = event.currentTarget.dataset.item;
+    console.log(item.categoryid, item.userid)
+    wx.navigateTo({
+      url: '../../user/user-info-center/user-info-center?categoryid=' + item.categoryid + "&userids=" + item.userid,
+    })
+  },
   onYueTa: function (event){
     var item = event.currentTarget.dataset.item;
     console.log(item.categoryid,item.userid)

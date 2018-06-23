@@ -1,12 +1,13 @@
 {
   "pages": [
-    "pages/user/user-info-center/user-info-center",
+    "pages/user/publish/publish-skill/publish-skill",
     "pages/index/index",
     "pages/yueta/yueta",
     "pages/logs/logs",
     "pages/tab/near/near",
     "pages/tab/msg/msg",
-    "pages/tab/me/me"
+    "pages/tab/me/me",
+    "pages/user/user-info-center/user-info-center"
   ],
   "window": {
     "backgroundTextStyle": "white",
@@ -18,7 +19,7 @@
   "tabBar": {
     "list": [
       {
-        "pagePath": "pages/user/user-info-center/user-info-center",
+        "pagePath": "pages/index/index",
         "text": "首页",
         "iconPath": "/img/ic_index_off.png",
         "selectedIconPath": "/img/ic_index_on.png"

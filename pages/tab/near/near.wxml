@@ -4,7 +4,7 @@
   <view class='near-list-item' wx:for="{{nearData}}" wx:key="near-key">
     <!-- 头像、距离等 -->
     <view class='near-list-item-user-info'>
-      <image class='user-info-avatar-image' src='{{item.avatar}}'></image>
+      <image class='user-info-avatar-image' src='{{item.avatar}}' bindtap='skipUserInfo' data-item='{{item}}'></image>
       <view class='near-list-item-user-info-details'>
         <view class='user-info-details'>
           <text>{{item.nickname}}</text>

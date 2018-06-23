@@ -6,13 +6,14 @@ Page({
    */
   data: {
     isCollect:false,
+    iShowDialog:false
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    console.log('onload',options);
   },
 
   /**
@@ -81,5 +82,22 @@ Page({
   },
   onYueTa: function (event){
     var isCollectemp = event.currentTarget.dataset.userid;
+    this.setData({
+      iShowDialog: !this.data.iShowDialog
+    });
+    console.log(this.data.iShowDialog);
+  },
+  skipUserInfo: function() {
+    wx.navigateTo({
+      url: '../user-info-center/user-info-center',
+    })
+    // wx.redirectTo({
+    //   url: '../user-info-center/user-info-center',
+    // })
+  },
+  onClickLayer:function(){
+    this.setData({
+      iShowDialog: !this.data.iShowDialog
+    });
   }
 })

@@ -26,7 +26,7 @@
 
     <view class='user-info-item'>
     <text>访客</text>
-    <view class='user-visitor-list'><image></image><image></image><image></image></view>
+    <view class='user-visitor-list'><image bindtap='skipUserInfo'></image><image></image><image></image></view>
     <text class='user-visitor-list-num'>9156人</text>
   </view>
 
@@ -70,3 +70,9 @@
 
 </view>
 <button class='user-info-yue-ta' bindtap='onYueTa' data-userid='123456'>约Ta</button>
+<view class='{{iShowDialog?"layer_gary":"layer-hidden"}}' bindtap='onClickLayer'>
+  <view>
+  <view class='layer_gary-content'><text>看电影</text><text>享美食</text></view>
+  </view>
+  <view id='triangle-down'></view>
+</view>
