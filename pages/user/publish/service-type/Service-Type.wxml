@@ -1,0 +1,43 @@
+<!--pages/user/publish/service-type/Service-Type.wxml-->
+<view class='service-type-item-wrap'>
+  <view class='item-view-title'>
+    <text>{{typeData.on_line.title}}</text>
+    <text class='must-class' wx:if="{{typeData.on_line.must.ismust}}">({{typeData.on_line.must.desc}})</text>
+    <text class='text-color99999'>{{typeData.on_line.desc}}</text>
+  </view>
+  <view class='item-view-price'>
+    <text class='iconfont icon-on-line'></text>
+    <input value='{{typeData.on_line.price}}' maxlength='4' type='number' placeholder="{{typeData.on_line.price_des}}"></input>
+    <text>元/次</text>
+  </view>
+</view>
+
+<view class='service-type-item-wrap'>
+  <view class='item-view-title'>
+    <text>{{typeData.off_line.title}}</text>
+    <text wx:if="{{typeData.ff_line.must.ismust}}">{{typeData.on_line.must.desc}}</text>
+    <text class='text-color99999'>{{typeData.off_line.desc}}</text>
+  </view>
+  <view class='off-line-item-class-wrap'>
+    <view wx:for="{{typeData.off_line.list}}" class='off-line-item-class'>
+      <text class='iconfont {{item.key==="spzx"?"icon-type-video":"icon-phone"}}'></text>
+      <text>{{item.type_name}}</text>
+      <!-- <text>{{item.result}}</text> -->
+      <picker bindchange="bindPickerChange" value="{{type_index}}" range="{{type_array}}" data-key='{{item.key}}'>
+        <text>{{type_array[type_index]}}</text>
+      </picker>
+      <text class='iconfont icon-arrow-right'></text>
+    </view>
+  </view>
+</view>
+
+<view class='service-type-item-wrap'>
+  <text>{{paidan.title}}</text>
+  <view class='item-paidan'>
+    <text class='text-color99999'>{{paidan.desc}}</text>
+    <switch></switch>
+  </view>
+
+</view>
+
+<publish-component setup="2"></publish-component>

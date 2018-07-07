@@ -1,2 +1,68 @@
 <!--pages/user/publish/publish-skill/publish-skill.wxml-->
+<block wx:key='key' wx:for="{{skillData.list}}">
+  <view class='skill-info-item'>
+    <view class='skill-info-item-top-title'>
+      <text>{{item.title}}<text class='text-must-style' wx:if="{{item.must.ismust}}">({{item.must.desc}})</text></text>
+      <text wx:if='{{item.type==="selectAlbum"}}' class='font-color-999'>{{item.desc}}</text>
+    </view>
+    <block wx:if='{{item.type==="selectAlbum"}}'>
+      <view class='select-photo-album'>
+        <view class='select-photo-album-left'>
+          <image class='select-photo-album-img-mode' src='{{selectPhotos[0]?"selectPhotos[0]":"../../../../img/ic-add-photo-mode.png"}}' bindtap='onSelctPhoto' data-index='0'></image>
+          <image class='select-photo-album-img' src='{{selectPhotos[1]?"selectPhotos[1]":"../../../../img/ic-add-photo.png"}}' bindtap='onSelctPhoto' data-index='1'></image>
+          <image class='select-photo-album-img' src='{{selectPhotos[2]?"selectPhotos[2]":"../../../../img/ic-add-photo.png"}}' bindtap='onSelctPhoto' data-index='2'></image>
+        </view>
+        <view class='select-photo-album-right'>
+          <image src='{{selectPhotos[3]?"selectPhotos[3]":"../../../../img/ic-add-photo.png"}}' bindtap='onSelctPhoto' data-index='3'></image>
+          <image src='{{selectPhotos[4]?"selectPhotos[4]":"../../../../img/ic-add-photo.png"}}' bindtap='onSelctPhoto' data-index='4'></image>
+          <image src='{{selectPhotos[5]?"selectPhotos[5]":"../../../../img/ic-add-photo.png"}}' bindtap='onSelctPhoto' data-index='5'></image>
+        </view>
+      </view>
+    </block>
+    <block wx:if='{{item.type==="checkbox"}}'>
+      <check-box-select listData="{{item.key==='mtlx'?modelList:timeList}}" bindSelectListener="onTextSelect" data-key="{{item.key}}"></check-box-select>
+    </block>
+    <block wx:if='{{item.type==="textarea"}}'>
+      <view class='textarea-parent'>
+        <textarea maxlength='200' placeholder="{{item.desc}}" class='textarea' bindinput='onTextInputLisener'></textarea>
+        <text>{{inputLength}}/200</text>
+      </view>
+    </block>
+    <block wx:if='{{item.type==="voice"}}'>
+      <text class='font-color-999'>{{item.desc}}</text>
+      <view wx:if="{{!tempFilePath}}" class='add-record-audio' bindtap='onShowRecordingDialog'>
+        <image class='iconfont icon-recording'></image>
+        <text>添加录音</text>
+      </view> 
+      <view wx:else class='voice-description'>
+        <view class='voice-description-text'><text class='iconfont icon-voice-play' style='font-size:24px'></text><text>60s</text></view>
+        <view class='voice-description-icon'><image src='../../../../img/ic-rest-recording.png'></image><text>重新录制</text></view>
+      </view>
+    </block>
+  </view>
+</block> 
+<publish-component showProgress="{{setUp}}" isEnableNext="{{true}}" bindonNext="onNext"></publish-component>
+<view class='{{dialogRecord.ishow?"layer-dialog-recording":"dialog-recording-hidden"}}'>
+  <view class='dialog-recording'>
+    <view class='dialog-recording-header'>
+    <text style='color: #262626;'>{{timerCount === 0?'最多可以录制60s':'松开结束  '+timerCount+'s'}}</text>
+    <text bindtap='onCloseRecordingDialog'>取消</text>
+  </view>
 
+  <view class='dialog-recording-paret' wx:if='{{!dialogRecord.isRecordFinish}}'>
+    <view class='dialog-recording-recording-wrap {{dialogRecord.isPress?"dialog-recording-recording-wrap-press":""}}' bindlongpress='onStartRecording' bindtouchend='onStopRecording'>
+      <view class='dialog-recording-recording' style='{{dialogRecord.isPress?"background-color:#5caf3a":""}}'>
+        <text class='iconfont icon-recording'></text>
+        <text>{{timerCount ===0?'按住说话':'正在录音'}}</text>
+      </view>
+    </view>
+  </view>
+  <block wx:else>
+    <view  class='dialog-recording-listenering'>
+      <text class='iconfont icon-back' bindtap='onResetRecord'></text>
+      <text class='iconfont {{dialogRecord.isPlay?"icon-stop":"icon-play"}}' bindtap='onPlayOrPause'></text>
+      <text class='iconfont icon-finish' bindtap='onRecordFinish'></text>
+    </view> 
+  </block>
+</view>
+</view>

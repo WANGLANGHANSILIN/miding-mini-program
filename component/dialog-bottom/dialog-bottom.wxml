@@ -1,0 +1,6 @@
+<!--component/dialog-bottom/dialog-bottom.wxml-->
+<view class='dialog-bottom-wrap' style='background-color:rgba(0,0,0,{{opacity}})'>
+  <view class='dialog-bottom-wrap-bottom' style='height:{{bottom_height}};background-color:{{bottom_color}}'>
+    <slot></slot>
+  </view>
+</view>

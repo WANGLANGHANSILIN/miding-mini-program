@@ -1,0 +1,47 @@
+/* component/PublishComponent/PublishComponent.wxss */
+@import '../../libs/iconfont.wxss';
+
+.publish-view-group {
+  width: 100%;
+  padding: 28rpx;
+  box-sizing: border-box;
+  margin-top: 28rpx;
+}
+
+.publish-view-group>button {
+  width: 90%;
+  height: 46px;
+  color: white;
+  border-radius: 23px;
+}
+
+.button-wait-publish{
+  background: #a8d297;
+  border: 1rpx solid #a8d297;
+}
+.button-publish {
+  background: #5caf3c;
+  border: 1px solid #5caf3c;
+}
+
+.publish-status {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 28rpx;
+}
+
+.publish-status text {
+  font-size: 14px;
+  flex: 1;
+}
+
+.text-select {
+  color: #5caf3c;
+}
+
+.text-normal{
+  color: #999999;
+}

@@ -1,1 +1,6 @@
-{"navigationBarTitleText": "发布技能"}
+{
+  "navigationBarTitleText": "发布技能",
+  "usingComponents": {
+  "publish-component": "../../../../component/PublishComponent/PublishComponent",
+  "check-box-select": "../../../../component/checkBoxSelect/checkBoxSelect"
+}}

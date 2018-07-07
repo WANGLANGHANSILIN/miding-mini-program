@@ -1,0 +1,10 @@
+<!--component/PublishComponent/PublishComponent.wxml-->
+
+<view class='publish-view-group'>
+  <button class='{{isEnableNext?"button-publish":"button-wait-publish"}}' bindtap='onNext'>下一步</button>
+  <view class='publish-status'>
+    <block wx:for="{{textProgressList}}" wx:for-index="ind" wx:key='key'>
+    <text class='iconfont icon-arrow-right {{showProgress>ind?"text-select":"text-normal"}}'>{{item}}</text>
+    </block>
+  </view>
+</view>

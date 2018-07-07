@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "dialog-bottom": "../dialog-bottom/dialog-bottom"
+  }
+}

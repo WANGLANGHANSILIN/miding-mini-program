@@ -1,0 +1,7 @@
+<!--component/checkBoxSelect/checkBocSelect.wxml-->
+<view class='check-box-container'>
+  <block wx:key='key' wx:for="{{listData}}">
+    <text class='{{item.check?"select-text-status":"normal-text-status"}}' bindtap='onTextItemClick' data-item='{{item}}' data-index='{{index}}'>{{item.title}}</text>
+  </block>
+</view>
+<!--  -->

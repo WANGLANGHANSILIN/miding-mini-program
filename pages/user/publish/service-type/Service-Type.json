@@ -1,0 +1,5 @@
+{
+  "usingComponents":{
+    "publish-component": "../../../../component/PublishComponent/PublishComponent"
+  }
+}

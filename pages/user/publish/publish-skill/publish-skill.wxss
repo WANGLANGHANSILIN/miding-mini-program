@@ -1,1 +1,258 @@
 /* pages/user/publish/publish-skill/publish-skill.wxss */
+.skill-info-item {
+  padding: 28rpx 28rpx 0;
+  font-size: 14px;
+  color: #333333;
+}
+
+.skill-info-item-top-title{
+  position: relative;
+  margin-bottom: 16rpx;
+}
+
+.skill-info-item-top-title text:nth-child(2){
+  position: absolute;
+  right: 0;
+}
+
+.text-must-style {
+  color: #ff8b17;
+  margin-left: 24rpx;
+}
+
+.font-color-999{
+  color: #999999;
+}
+.add-record-audio{
+  width: 200rpx;
+  height: 200rpx;
+  background: #e6e6e6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #999999;
+  margin-top: 12rpx;
+}
+.add-record-audio>image{
+  width: 56rpx;
+  height: 72rpx;
+  display: block;
+  margin-bottom: 16rpx;
+  font-size: 28px;
+}
+
+/* 录音对话框 */
+.layer-dialog-recording{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: block;
+  top: 0;
+  background: rgba(0, 0, 0, .6);
+}
+
+.dialog-recording-hidden{
+  display: none;
+}
+
+.dialog-recording {
+  position: absolute;
+  height: 560rpx;
+  width: 100%;
+  bottom: 0;
+  color: #999999;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+}
+
+.dialog-recording-header{
+  height: 96rpx;
+  width: 100%;
+  line-height: 96rpx;
+  position: relative;
+  text-align: center;
+  border-bottom: 1rpx solid #d9d9d9;
+  background: #f9f9f9;
+}
+
+.dialog-recording-header>text:last-child{
+  position: absolute;
+  right: 28rpx;
+  font-size: 12px;
+  color: #5691ff;
+  padding: 0 14rpx;
+}
+
+.dialog-recording-paret{
+  display: flex;
+  height: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.dialog-recording-recording-wrap{
+  padding: 48rpx;
+  border-radius: 50%;
+}
+.dialog-recording-recording-wrap-press{
+  background-color: #ebf6dd;
+  color: white;
+  animation: myfirst 0.5s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+.dialog-recording-recording{
+  width: 224rpx;
+  height: 224rpx;
+  border-radius: 50%;
+  border: 1rpx solid #d9d9d9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.dialog-recording-recording text:first-child{
+  font-size: 64px;
+  margin-bottom: 4rpx;
+}
+
+.dialog-recording-listenering {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+  justify-content: center;
+  font-size:  55px;
+  color: #5caf3a;
+  padding: 128rpx;
+  text-align: center;
+}
+
+.dialog-recording-listenering text {
+  font-size: 64px;
+  flex: 1;
+}
+
+.dialog-recording-listenering text:nth-child(2){
+  font-size: 98px;
+}
+
+@keyframes myfirst
+{
+from {padding: 0;}
+to {padding: 48rpx;}
+}
+
+.textarea-parent{
+  position: relative;
+}
+
+.textarea{
+  width: 100%;
+  height: 240rpx;
+  border-radius: 24rpx;
+  background: #e6e6e6;
+  margin-top: 12rpx;
+  padding: 24rpx;
+  box-sizing: border-box;
+}
+
+.textarea-parent>text{
+  position: absolute;
+  bottom: 24rpx;
+  right: 24rpx;
+  border-radius: 24rpx;
+  color: white;
+  background: #b3b3b3;
+  padding: 4rpx 12rpx;
+}
+
+/* 选择相册 */
+.select-photo-album {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 500rpx;
+  box-sizing: border-box;
+}
+.select-photo-album-left {
+  flex: 2;
+  height: 100%;
+  box-sizing: border-box;
+  margin-right: 2%;
+}
+
+.select-photo-album-left image{
+  width: 49%;
+  height: 33%;
+  margin-right: 2%;
+}
+.select-photo-album-left image:last-child{
+  margin-right: 0;
+  width: 49%;
+}
+.select-photo-album-left image:first-child{
+  width: 100%;
+  height: 67%;
+  margin-bottom: 1%;
+}
+
+.select-photo-album-right image{
+  width: 100%;
+  height: 33%;
+}
+
+.select-photo-album-right {
+  flex: 1;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/* 语音介绍 */
+.voice-description {
+  position: relative;
+  width: 100%;
+  height: 120rpx;
+  box-sizing: border-box;
+}
+
+.voice-description .voice-description-text{
+  position: absolute;
+  top: 24rpx;
+  left: 0;
+  line-height: 72rpx;
+  background: #5caf3a;
+  border-radius: 12rpx;
+  width: 400rpx;
+  height: 72rpx;
+  color: white;
+  padding: 0 24rpx;
+  box-sizing: border-box;
+}
+.voice-description .voice-description-icon{
+  position: absolute;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  right: 0;
+}
+.voice-description-text text:last-child{
+  position: absolute;
+  right: 24rpx;
+  font-size: 14px;
+}
+
+.voice-description-icon>image{
+  width: 72rpx;
+  height: 72rpx;
+}

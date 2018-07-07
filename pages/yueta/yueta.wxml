@@ -43,7 +43,7 @@
     <text>诚意金</text>
   </view>
 
-  <block wx:for="{{yueTaData.needattr}}" wx:for-item="needAttrItem">
+  <block wx:for="{{yueTaData.needattr}}" wx:for-item="needAttrItem"  wx:key='key'>
       <earnest-money wx:if="{{needAttrItem.name === 'cyj'}}" earnestMoneyList="{{needAttrItem.values}}" bindcyjSelectTap="cyjSelectTap">{{needAttrItem}}</earnest-money> 
   </block>
   <view class='container-yue-ta-publish'>
