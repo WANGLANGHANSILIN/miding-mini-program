@@ -21,8 +21,9 @@ Page({
       { title: '腿模', check: true, },
       { title: '胸模', check: true, },
 
+      { title: '哈哈摸', check: false,},
 
-      
+
     ],
     timeList: [
       { title: '全天', check: true,},
