@@ -20,6 +20,9 @@ Page({
       { title: '脚模', check: false, },
       { title: '腿模', check: true, },
       { title: '胸模', check: true, },
+
+
+      
     ],
     timeList: [
       { title: '全天', check: true,},
